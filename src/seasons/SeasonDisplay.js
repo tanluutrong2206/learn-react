@@ -17,7 +17,8 @@ export class SeasonDisplay extends React.Component {
         })
     );
   }
-  render() {
+
+  renderBody = () => {
     if (this.state.errorMessage && !this.state.lat) {
       return <div>Error message: {this.state.errorMessage}</div>;
     }
@@ -25,5 +26,9 @@ export class SeasonDisplay extends React.Component {
       return <SeasonDisplayDetail lat={this.state.lat} />;
     }
     return <Spinner message="Please accept location request" />;
+  };
+
+  render() {
+    return this.renderBody();
   }
 }
