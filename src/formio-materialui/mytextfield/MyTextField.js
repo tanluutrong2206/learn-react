@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-// import { Field } from "redux-form";
 import { ReactComponent } from "react-formio";
 import { TextField } from "@material-ui/core";
 
