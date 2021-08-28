@@ -1,11 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
 
-import SongApp from "./songs/SongApp";
-import reducers from "./reducers";
+import reducers from "./blog/reducers";
+import BlogApp from "./blog/BlogApp";
 
+const store = createStore(reducers, applyMiddleware(thunk));
 ReactDOM.render(
   <React.StrictMode>
     {/* Season display */}
@@ -14,8 +16,9 @@ ReactDOM.render(
     {/* Pics App */}
     {/* <PicsApp /> */}
     {/* <FormIoMaterialUiApp /> */}
-    <Provider store={createStore(reducers)}>
-      <SongApp />
+    <Provider store={store}>
+      {/* <SongApp /> */}
+      <BlogApp />
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")
