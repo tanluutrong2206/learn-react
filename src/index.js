@@ -5,7 +5,7 @@ import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 
 import reducers from "./blog/reducers";
-import BlogApp from "./blog/BlogApp";
+import ClientApp from "./streams/client/ClientApp";
 
 const store = createStore(reducers, applyMiddleware(thunk));
 ReactDOM.render(
@@ -18,7 +18,8 @@ ReactDOM.render(
     {/* <FormIoMaterialUiApp /> */}
     <Provider store={store}>
       {/* <SongApp /> */}
-      <BlogApp />
+      {/* <BlogApp /> */}
+      <ClientApp />
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")
