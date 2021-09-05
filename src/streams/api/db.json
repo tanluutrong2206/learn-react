@@ -3,7 +3,20 @@
     {
       "title": "My Stream",
       "description": "My Description",
+      "userId": "102386799782558879580",
       "id": 1
+    },
+    {
+      "title": "New Stream",
+      "description": "This is a description",
+      "userId": "102386799782558879580",
+      "id": 2
+    },
+    {
+      "title": "a",
+      "description": "b",
+      "userId": "102386799782558879580",
+      "id": 3
     }
   ]
 }
