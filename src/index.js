@@ -5,7 +5,7 @@ import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 
 import reducers from "./streams/client/reducers";
-import ClientApp from "./streams/client/ClientApp";
+import TranslateApp from "./translate/TranslateApp";
 
 const composeEnhancers =
   (typeof window !== "undefined" &&
@@ -24,7 +24,8 @@ ReactDOM.render(
     <Provider store={store}>
       {/* <SongApp /> */}
       {/* <BlogApp /> */}
-      <ClientApp />
+      {/* <ClientApp /> */}
+      <TranslateApp />
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")
